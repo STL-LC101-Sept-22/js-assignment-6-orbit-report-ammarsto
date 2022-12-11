@@ -14,10 +14,12 @@ export class Satellite {
 		this.operational = operational;
    }
 	
-	isSpaceDebris(satelliteType: string): boolean {
+	isSpaceDebris(satellite: {type: string}): boolean {
 		console.log("Running isSpaceDebris")
-		if (satelliteType === "Space Debris") {
+		if (this.type === "Space Debris") {
 			return true;
+		} else {
+			return false;
 		}
    }
 
